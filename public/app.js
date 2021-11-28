@@ -24,9 +24,11 @@ const app = new Vue({
 
       if (response.ok) {
         const result = await response.json();
+        const { href } = location;
+        const { slug } = result;
 
         this.formVisible = false;
-        this.shortedUrl = `http://localhost:3000/${result.slug}`;
+        this.shortedUrl = href + slug;
       } else if (response.status === 429) {
         this.errorMessage =
           "You are sending too many requests. Try again in 30 seconds.";

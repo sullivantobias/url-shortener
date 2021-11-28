@@ -87,6 +87,17 @@ a {
     text-align: center;
 }
 
+.errorMessage {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
 
 @media screen and (min-width: 768px) {
     .form {

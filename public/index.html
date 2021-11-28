@@ -13,11 +13,11 @@
       <input pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$" required class="input" type="text" v-model="url" name="url" id="url" placeholder="Type your url*">
       <input class="input" type="text" v-model="slug" name="slug" id="slug" placeholder="Type your slug (optional)">
       <button type="submit" class="create">create</button>
-
-      <div v-if="errorMessage" class="errorMessage">
-        {{errorMessage}}
-      </div>
     </form>
+
+    <div v-if="errorMessage" class="errorMessage">
+      {{errorMessage}}
+    </div>
 
     <div class="result" v-if="shortedUrl" >
       <p class="created">You created the shorted url</p>
